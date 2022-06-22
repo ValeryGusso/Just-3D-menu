@@ -10,8 +10,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* background: #434750; */
-  background: url("https://www.skyviewadv.com/wp-content/uploads/2016/10/New-York-Wallpaper-Background-7.jpg");
+/*   background: url("https://www.skyviewadv.com/wp-content/uploads/2016/10/New-York-Wallpaper-Background-7.jpg"); */
+  background: url("img/city.webp");
   background-size: cover;
   cursor: none;
   overflow: hidden;
