@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", "Comic Sans";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: #434750; */
+  background: url("city.webp");
+  background-size: cover;
+  cursor: none;
+  overflow: hidden;
+  /* opacity: 50%; */
+}
+
+.container {
+  display: flex;
+  margin-top: 22%;
+  opacity: 100%;
+}
+
+.cursor {
+  position: absolute;
+  /* border: 1px solid black; */
+  width: 5px;
+  height: 5px;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  /* transition: 0.3s; */
+}
+
+.cursor img {
+  width: 125px;
+  height: 55px;
+}
+
+/* Стили для левостороннего блока */
+
+.isometric-list-left {
+  width: 200px;
+  position: relative;
+  transform: skewY(-15deg);
+  margin-right: 50px;
+}
+
+.isometric-list-left li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  background: #3e3f46;
+  padding: 15px;
+  color: #999;
+  letter-spacing: 0.1em;
+  transition: 0.7s;
+  display: block;
+  z-index: var(--i);
+  font-size: 24px;
+  margin-bottom: 10px;
+  align-content: bottom;
+}
+
+.isometric-list-left li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -45px;
+  width: 45px;
+  height: 100%;
+  background: #2e3133;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.7s;
+}
+
+.isometric-list-left li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -45px;
+  height: 45px;
+  width: 100%;
+  background: #35383e;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.7s;
+}
+
+.isometric-list-left li:hover::before {
+  background: #f76a32;
+}
+
+.isometric-list-left li:hover::after {
+  background-color: #ff723b;
+}
+
+.isometric-list-left li:hover {
+  color: #fff;
+  background: #ec612a;
+  transform: translate(50px);
+  /* cursor: none */
+}
+
+/* .isometric-list-left li:last-child::after {
+    box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.7)
+} */
+
+.drop li {
+  transform: translateY(var(--x));
+  background: #ec612a;
+  transition: 7s;
+  filter: blur(15px);
+}
+
+.drop li::after {
+  background: #ff723b;
+}
+
+.drop li::before {
+  background: #f76a32;
+  box-shadow: 100px -200px 100px red;
+}
+
+.drop li:hover {
+  transform: translateY(450px) !important;
+  /* cursor: pointer; */
+}
+
+/* Стили для правостороннего блока */
+
+.isometric-list-right {
+  width: 200px;
+  position: relative;
+  transform: skewY(15deg);
+  margin-right: 50px;
+}
+
+.isometric-list-right li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  background: #3e3f46;
+  padding: 15px;
+  color: #999;
+  letter-spacing: 0.1em;
+  transition: 0.7s;
+  display: block;
+  z-index: var(--i);
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.isometric-list-right li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -45px;
+  width: 45px;
+  height: 100%;
+  background: #2e3133;
+  transform-origin: left;
+  transform: skewY(-45deg);
+  transition: 0.7s;
+}
+
+.isometric-list-right li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -45px;
+  height: 45px;
+  width: 100%;
+  background: #35383e;
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+  transition: 0.7s;
+}
+
+.isometric-list-right li:hover::before {
+  background: #f76a32;
+}
+
+.isometric-list-right li:hover::after {
+  background-color: #ff723b;
+}
+
+.isometric-list-right li:hover {
+  color: #fff;
+  background: #ec612a;
+  transform: translate(-50px);
+}
+
+/* .isometric-list-right li:last-child::after {
+    box-shadow: 120px 120px 20px rgba(0, 0, 0, 0.7)
+} */
+
+.drop2 li {
+  transform: translateY(var(--x));
+  background: #ec612a;
+  transition: 7s;
+  filter: blur(15px);
+}
+
+.drop2 li::after {
+  background: #ff723b;
+}
+
+.drop2 li::before {
+  background: #f76a32;
+  box-shadow: -100px -200px 100px red;
+}
+
+.drop2 li:hover {
+  transform: translateY(450px) !important;
+  /* cursor: pointer; */
+}
+
+/* Стили для вертикального блока */
+
+.isometric-list {
+  width: 200px;
+  position: relative;
+  /* transform: skewY(15deg); */
+  margin-left: 50px;
+}
+
+.isometric-list li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  background: #3e3f46;
+  padding: 15px;
+  color: #999;
+  letter-spacing: 0.1em;
+  transition: 0.7s;
+  display: block;
+  z-index: var(--i);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.isometric-list li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -45px;
+  width: 45px;
+  height: 100%;
+  background: #2e3133;
+  transform-origin: left;
+  transform: skewY(-45deg);
+  transition: 0.7s;
+}
+
+.isometric-list li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -45px;
+  height: 45px;
+  width: 100%;
+  background: #35383e;
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+  transition: 0.7s;
+}
+
+.isometric-list li:hover::before {
+  background: #1f5378;
+}
+
+.isometric-list li:hover::after {
+  background-color: #2982b9;
+}
+
+.isometric-list li:hover {
+  color: #fff;
+  background: #33a3ee;
+  transform: translateX(50px) translateY(-10px);
+}
+
+.isometric-list li:last-child::after {
+  box-shadow: 120px 120px 20px rgba(0, 0, 0, 0.7);
+}
