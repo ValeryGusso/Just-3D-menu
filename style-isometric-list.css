@@ -11,7 +11,7 @@ body {
   align-items: center;
   min-height: 100vh;
   /* background: #434750; */
-  background: url("city.webp");
+  background: url("/img/city.webp");
   background-size: cover;
   cursor: none;
   overflow: hidden;
